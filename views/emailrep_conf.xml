@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_form_odoo_emailrep_checks" model="ir.ui.view">
+            <field name="name">Validated users</field>
+            <field name="model">odoo.emailrep.checks</field>
+            <field name="arch" type="xml">
+                <form string="Azione">
+                    <sheet>
+
+                        <separator string="User to be checked via EmailRep"/>
+
+                        <group>
+                            <field name="res_user_id"/>
+                            <field name="is_checked"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_odoo_emailrep_checks" model="ir.ui.view">
+            <field name="name">Validated Users Tree</field>
+            <field name="model">odoo.emailrep.checks</field>
+            <field name="arch" type="xml">
+                <tree string="Azioni">
+                    <field name="res_user_id"/>
+                    <field name="is_checked"/>
+                </tree>
+            </field>
+        </record>
+        <act_window id="action_odoo_emailrep_checks" name="EmailRep" res_model="odoo.emailrep.checks" view_mode="tree,form" />
+
+        <record id="mailrep_res_users" model="ir.ui.view">
+        <field name="name">mailrep.res.users</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="MailRep configurations">
+                    <group col="4">
+                        <separator string="API" colspan="4"/>
+                        <field name="emailrep_api_key" colspan="4"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+        </record>
+    </data>
+</odoo>

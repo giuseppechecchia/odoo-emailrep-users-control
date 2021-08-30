@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<menuitem id="main_menu_odoo_emailrep" name="MainRep integration" sequence="1" web_icon="base,static/description/icon.png"/>
+
+			<menuitem id="odoo_emailrep_checks" name="EmailRep validated users" action="action_odoo_emailrep_checks" parent="main_menu_odoo_emailrep" sequence="10"/>
+	</data>
+</odoo>
+

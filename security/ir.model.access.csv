@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_odoo_emailrep_checks,access_odoo_emailrep_checks,model_odoo_emailrep_checks,base.group_user,1,1,1,1
+access_odoo_emailrep_datas,access_odoo_emailrep_datas,model_odoo_emailrep_datas,base.group_user,1,1,1,1
